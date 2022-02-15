@@ -1,0 +1,59 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0%;
+    height: 300vh;
+    font-family: sans-serif;
+    background-color: #090979;
+    
+}
+.nav{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 62%);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    }
+
+.nav a{
+    text-decoration: none;
+    padding: 15px;
+    color: #131752;
+    font: 500 18px/24px sans-serif;
+}
+
+.nav a:last-child{
+padding-right: 50px;
+}
+
+.tela_inteira{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Apresentacao{
+    
+    color:#fff ;
+    font-size: 40px;
+}
+
+#Apresentacao h1,#Apresentacao h2,#Apresentacao h3{
+    margin: 5px;
+}
+
+#Project{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 80px;
+    gap: 30px;
+}
+
+#Project .Card{
+    box-shadow: 0 0 5px #000;
+}
+
