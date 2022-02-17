@@ -37,10 +37,14 @@ padding-right: 50px;
 }
 
 #Apresentacao{
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color:#fff ;
-    font-size: 40px;
+    font-size: 1.5rem;
+    text-align:center;
 }
+
 
 #Apresentacao h1,#Apresentacao h2,#Apresentacao h3{
     margin: 5px;
@@ -48,12 +52,50 @@ padding-right: 50px;
 
 #Project{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 80px;
+    grid-template-columns: 1fr;
+    padding: 40px;
     gap: 30px;
+    
 }
 
 #Project .Card{
-    box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 5px #fff;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+
+}
+
+#Project .Card:hover{
+transform: scale(1.1);
+}
+#Project .Card .project_card{
+    width: 100%;
+    height: 250px;
+}
+
+.avatar{
+    width: 50%;
+
+}
+
+
+
+@media(min-width:800px) {
+    #Apresentacao{
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0 50px;
+    }
+    #Apresentacao .bloco_de_texto{
+    display: flex;
+    flex-direction: column;
+    }
+    #Project{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 100px 300px 1fr;
+
+  } 
 }
 
