@@ -5,7 +5,6 @@ body{
     margin: 0%;
     height: 300vh;
     font-family: sans-serif;
-    background-color: #090979;
     
 }
 .nav{
@@ -34,6 +33,8 @@ padding-right: 50px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #090979;
+
 }
 
 #Apresentacao{
@@ -50,31 +51,37 @@ padding-right: 50px;
     margin: 5px;
 }
 
-#Project{
+#Project .projects{
     display:grid;
     grid-template-columns: 1fr;
     padding: 40px;
-    gap: 30px;
+    gap: 50px;
     
 }
 
-#Project .Card{
-    box-shadow: 0 0 5px #fff;
+#Project .projects .Card{
+    box-shadow: 0 0 5px #555;
     background-color: #fff;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 
 }
 
-#Project .Card:hover{
-transform: scale(1.1);
+#Project .projects .Card:hover{
+transform: scale(1.05) ;
+box-shadow: 0 5px 5px #555;
 }
-#Project .Card .project_card{
+#Project .projects .Card .project_card{
     width: 100%;
     height: 250px;
 }
 
+#Project .projects .Card .texto_card{
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    text-align: center;
+}
 .avatar{
     width: 50%;
 
@@ -84,7 +91,7 @@ transform: scale(1.1);
 
 @media(min-width:800px) {
     #Apresentacao{
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-direction: row;
         padding: 0 50px;
     }
@@ -92,10 +99,13 @@ transform: scale(1.1);
     display: flex;
     flex-direction: column;
     }
-    #Project{
+    #Project .projects{
     grid-template-columns: repeat(3,1fr);
-    grid-template-columns: 100px 300px 1fr;
+    
 
   } 
+  .avatar{
+      width: 400px;
+  }
 }
 
